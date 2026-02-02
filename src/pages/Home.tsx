@@ -10,7 +10,7 @@ function Home() {
     fetch(import.meta.env.VITE_API_URL + "posts")
       .then((response) => response.json())
       .then((data) =>
-        setPosts(data.data.filter((post: Post) => post.published === false)),
+        setPosts(data.data.filter((post: Post) => post.published === true)),
       )
       .catch((error) => console.log(error))
       .finally(() => setIsLoading(false));
