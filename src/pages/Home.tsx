@@ -6,11 +6,13 @@ function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  useEffect(() => {    
+  useEffect(() => {
     fetch(import.meta.env.VITE_API_URL + "posts")
       .then((response) => response.json())
       .then((data) =>
-        setPosts(data.data.filter((post: Post) => post.published === true)),
+        setPosts(
+          data.data.filter((post: Post) => post.published === true).reverse(),
+        ),
       )
       .catch((error) => console.log(error))
       .finally(() => setIsLoading(false));
