@@ -2,7 +2,7 @@ import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { useParams } from "react-router";
 import type { Post, Comment } from "../types";
 
-function Post() {
+function PostPage() {
   const { postId } = useParams();
   const [post, setPost] = useState<Post>();
   const [comments, setComments] = useState<Comment[]>([]);
@@ -124,4 +124,4 @@ function Post() {
   );
 }
 
-export default Post;
+export default PostPage;
