@@ -77,7 +77,7 @@ function Post() {
       <div className="flex flex-col gap-10 ">
         <form
           onSubmit={(e) => handleCommentSubmit(e)}
-          className="flex flex-col rounded-md shadow-md shadow-brand-main gap-6 p-6 "
+          className="flex flex-col rounded-md shadow-md gap-6 p-6 "
         >
           <div className="text-2xl text-center">Leave a comment</div>
           {errors &&
@@ -105,14 +105,14 @@ function Post() {
           />
           <button
             type="submit"
-            className="p-2 rounded-sm shadow-xs shadow-brand-main "
+            className="p-2 rounded-sm shadow-sm "
           >
             Submit
           </button>
         </form>
         {comments?.map((comment) => (
           <div
-            className="shadow-xs shadow-brand-main p-2 rounded-md"
+            className="shadow-md p-2 rounded-md"
             key={comment.id}
           >
             <div className="text-2xl">{comment.username} says:</div>

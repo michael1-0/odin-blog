@@ -26,7 +26,7 @@ function Home() {
     <>
       {posts?.map((post) => (
         <div key={post.id} className="p-2 my-2">
-          <div className="p-2 flex justify-between items-center shadow-lg shadow-brand-main rounded-md gap-4 animate-glow">
+          <div className="p-2 flex justify-between items-center shadow-lg rounded-md gap-4 ">
             <div className="flex-2 max-w-xl">
               <h1 className="text-3xl">{post.title}</h1>
               <div>{post.content.slice(0, 14) + "..."}</div>
